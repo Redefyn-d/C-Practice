@@ -201,3 +201,80 @@ int main(){
     }
     return 0;
 }
+//Program for nested for loops 
+#include <stdio.h>
+int main(){
+    int x;
+    printf("Enter the number till which you want to learn tables");
+    scanf("%d",&x);
+    for (int i=1;i<=x;i++){
+        printf("Table of %d\n",i);
+        for (int d=1;d<=10;d++){
+            printf("%dx%d=%d\n",i,d,i*d);
+        }
+    }
+}
+//program to show astrisks graph
+#include <stdio.h>
+int main(){
+    int x;
+    printf("Enter the no of rows you want");
+    scanf("%d",&x);
+    for (int i=1;i<=x;i++){
+        for (int d=1;d<=i;d++){
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+//Program to swap to integers
+#include <stdio.h>
+int main(){
+    int x,y;
+    printf("Enter two numbers");
+    scanf("%d%d",&x,&y);
+    printf("Values before swaping x=%d and y=%d",x,y);
+    x=x-y;
+    y=y+x;
+    x=y-x;
+    printf("\nAfter swaping the values:x=%d and y=%d",x,y);
+}
+//Program to show floyds triangle
+#include <stdio.h>
+int main(){
+    int x,y=1;
+    printf("Enter the number of rows you want in floyds triangle");
+    scanf("%d",&x);
+    for (int i=1;i<=x;i++){
+        for (int d=1;d<=i;d++){
+            printf("%d\t",y);
+            y+=1;
+        }
+        printf("\n");
+    }
+}
+//Program to print fibonacci series
+#include <stdio.h>
+int main(){
+    int x,a,b,c;
+    a=0;
+    b=1;
+    printf("Enter the number of numbers you want in the series");
+    scanf("%d",&x);
+    printf("%d\t%d\t",a,b);
+    for (int i=0;i<=x;i++){
+        c=a+b;
+        printf("%d\t",c);
+        a=b;
+        b=c;
+    }
+}
+//Program to print electricity bill
+#include <stdio.h>
+int main(){
+    int watts,usage,kw,cost;
+    printf("Enter the value of watts ,ussage cost of electricity rate");
+    scanf("%d%d%d",&watts,&usage,&cost);
+    kw=watts*(usage/1000);
+    printf("The cost to be paid for electicity bill is %d",kw*cost);
+}
