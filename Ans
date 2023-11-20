@@ -87,20 +87,21 @@ int main(){
 //Program to print prime numbers
 #include <stdio.h>
 int main(){
-    int x;
+    int n;
+    int c=0;
     printf("Enter the value till which you want to print the prime numbers");
-    scanf("%d",&x);
-    for (int i=0;i<=x;i++){
-        if (extern x℅i==0){
+    scanf("%d",&n);
+    for (int i=1;i<=n;i++){
+        if(n%i==0){
             c+=1;
         }
-        if (c>2){
-            printf("Not prime");
+        if(c>2){
+            printf("Not a prime number");
             break;
-        } 
+        }
     }
-    if(c==2){
-     printf("Prime Number");
+    if (c==2){
+        printf("Prime Number");
     }
 }
 //Program to print perfect numbers
@@ -125,12 +126,17 @@ int main(){
 #include <stdio.h>
 #include <math.h>
 int main(){
-    int x,cp,sum;
+    int x,cp,sum,c=0;
     printf("Enter a number");
     scanf("%d",&x);
     cp=x;
+    while(cp!=0){
+        c+=1;
+        cp/=10;
+    }
+    cp=x;
     while (cp!=0){
-        sum+=pow(cp%10,3);
+        sum+=pow(cp%10,c);
         cp/=10;
     }
     if (sum==x){
