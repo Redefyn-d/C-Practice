@@ -91,9 +91,16 @@ int main(){
     printf("Enter the value till which you want to print the prime numbers");
     scanf("%d",&x);
     for (int i=0;i<=x;i++){
-        if (i%10==1||i%10==3||i%10==5||i%10==7){
-            printf("%d\n",i);
+        if (extern x℅i==0){
+            c+=1;
         }
+        if (c>2){
+            printf("Not prime");
+            break;
+        } 
+    }
+    if(c==2){
+     printf("Prime Number");
     }
 }
 //Program to print perfect numbers
