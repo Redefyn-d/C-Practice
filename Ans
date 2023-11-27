@@ -291,3 +291,119 @@ int main(){
     kw=watts*(usage/1000);
     printf("The cost to be paid for electicity bill is %d",kw*cost);
 }
+//Password manager 
+#include <stdio.h>
+#include <ctype.h>
+int main(){
+    char x[2000];
+    printf("Enter the Password You Want To Validate : ");
+    scanf("%s",&x);
+    if(isdigit(x[0])==1){
+        printf("IThe Password is Not perfect as required");
+        return 0;
+    }
+    int c;
+    char cl='n',cs='n';
+    for (int i=0;x[i]!='\0';i++){
+        c+=1;
+        if(islower(x[i])==1){
+            cl='y';
+        }
+        if(isalpha(x[i])==0 && isdigit(x[i]==0)){
+            cs='y';
+        }
+    }
+    if(c<9){
+        printf("The Password is Not perfect as required");
+        return 0;
+    }
+    if(cl=='y'&&cs=='y'){
+        printf("The Password Is Good To Use");
+    }
+    else{
+        printf("The Password is Not perfect as required");
+    }
+    
+}
+//Program To Find Wether String Is Paliandrome Or Not
+#include <stdio.h>
+int main(){
+    char x[20000];
+    printf("Enter the string To be Checked : ");
+    scanf("%s",&x);
+    int i=0;
+    int c=0;
+    while (x[i]!='\0'){
+        c++;
+        i++;
+    }
+    char f='n';
+    for (int it=0;it<c;it++){
+        if(tolower(x[it])==tolower(x[c-1])){
+            c--;
+            f='y';
+        }
+        else{
+            printf("The Input String is not Paliandrome");
+            break;
+        }
+    }
+    if (f=='y'){
+        printf("The input String is Plainadrome");
+    }
+//Program to Arrange the Array In Ascending Or Descending 
+#include <stdio.h>
+int main(){
+char choice;
+printf("Enter D for descending and A for Ascending");
+scanf("%c",&choice);
+if(choice=='d'||choice=='D'){
+    int x;
+    printf("Enter the number of characters in the array : ");
+    scanf("%d",&x);
+    int a[x];
+    for (int i=0;i<x;i++){
+        printf("Enter value : ");
+        scanf("%d",&a[i]);
+    }
+    int b;
+    for (int j=0;j<x;j++){
+        for (int d=j+1;d<x;d++){
+            int xd;
+            if(a[j]<a[d]){
+                xd=a[j];
+                a[j]=a[d];
+                a[d]=xd;
+            }
+        }
+    }
+    for (int j3=0;j3<x;j3++){
+        printf("%d\t\t",a[j3]);
+    }
+}
+if(choice=='A'||choice=='a'){
+    int x;
+    printf("Enter the number of characters in the array : ");
+    scanf("%d",&x);
+    int a[x];
+    for (int i=0;i<x;i++){
+        printf("Enter value : ");
+        scanf("%d",&a[i]);
+    }
+    int b;
+    for (int j=0;j<x;j++){
+        for (int d=j+1;d<x;d++){
+            int xd;
+            if(a[j]>a[d]){
+                xd=a[j];
+                a[j]=a[d];
+                a[d]=xd;
+            }
+        }
+    }
+    for (int j3=0;j3<x;j3++){
+        printf("%d\t\t",a[j3]);
+    }
+}
+}
+}
