@@ -407,3 +407,109 @@ if(choice=='A'||choice=='a'){
 }
 }
 }
+//program to find factorial of a number
+#include <stdio.h>
+int main(){    
+    int x;
+    printf("Enter the number for which you want to find the factorial for");
+    scanf("%d",&x);
+    int p=1;
+    for(int i=1;i<=x;i++){
+        p*=i;
+    }
+    printf("%d",p);
+}
+//program to find the ASCII value
+#include <stdio.h>
+int main(){
+    char c;
+    printf("Enter the character you want to find ascii for");
+    scanf("%c",&c);
+    printf("%d",c);
+}
+//program to print leap years between 1901 and 2100
+#include <stdio.h>
+int main(){
+    for(int i=1901;i<=2100;i++){
+        if(i%4==0){
+            printf("%d\n",i);
+        }
+    }
+}
+//program to find the prime facotrial of number
+#include <stdio.h>
+int main(){
+    int x;
+    printf("Enter a number");
+    scanf("%d",&x);
+    for(int i=1;i<=x;i++){
+        if(x%i==0){
+            printf("%d\t",i);
+        }
+    }
+}
+//program to print number pyramid
+#include <stdio.h>
+int main(){
+    int x;
+    printf("Enter a number");
+    scanf("%d",&x);
+    for(int i=0;i<=x;i++){
+        for(int j=1;j<=i;j++){
+            printf("%d\t",j);
+        }
+    printf("\n");
+    }
+}
+//program to compress a number to one digit
+#include <stdio.h>
+int main(){
+    int x;
+    printf("Enter a number");
+    scanf("%d",&x);
+    while(x>=10){
+        x/=10;
+    }
+    printf("%d",x);
+}
+//program for a calculator
+#include <stdio.h>
+int main(){
+    char c;
+    printf("Enter what you want to do");
+    scanf("%c",&c);
+    int a,b;
+    printf("Enter a number");
+    scanf("%d",&a);
+    printf("Enter a number");
+    scanf("%d",&b);
+    switch (c){
+        case '+':
+            printf("%d",a+b);
+            break;
+        case '-':
+            printf("%d",a-b);
+            break;
+        case '*':
+            printf("%d",a*b);
+            break;
+        case '/':
+            printf("%d",a/b);
+            break;
+    }
+}
+//program to convert decimal number to binary number
+#include <stdio.h>
+int main(){
+    int x,a[10];
+    printf("Enter a number");
+    scanf("%d",&x);
+    int i;
+    for(i=0;x>0;i++){
+        a[i]=x%2;
+        x/=2;
+    }
+    for(int j=i-1;j>=0;j--){
+        printf("%d",a[j]);
+    }
+}
