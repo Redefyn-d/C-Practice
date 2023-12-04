@@ -513,3 +513,18 @@ int main(){
         printf("%d",a[j]);
     }
 }
+//program to convert binary number to decimal number
+#include <stdio.h>
+#include <math.h>
+int main(){
+    long x;
+    printf("Enter a binary number");
+    scanf("%d",&x);
+    int i,sum=0;
+    for(i=0;x!=0;i++){
+        int rem=x%10;
+        sum+=rem*(pow(2,i));
+        x/=10;
+    }
+    printf("%d",sum);
+}
