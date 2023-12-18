@@ -1,3 +1,7 @@
+Homework
+
+
+
 #include <stdio.h>
 void area(int x){
     printf("%d",x*x);
