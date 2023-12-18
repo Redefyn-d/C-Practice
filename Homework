@@ -1,12 +1,12 @@
 #include <stdio.h>
-void add(int x ,int b){
-    printf("%d",x+b);
+void area(int x){
+    printf("%d",x*x);
 }
 int main(){
-    int x,b;
-    printf("Enter two numbers:");
-    scanf("%d%d",&x,&b);
-    add(x,b);
+    int x;
+    printf("Enter side of the square:");
+    scanf("%d",&x);
+    area(x);
 }
 //program to increement (with num)
 #include <stdio.h>
@@ -24,15 +24,32 @@ int main(){
 }
 //Program to increement(with reference)
 #include <stdio.h>
-void add(int x){
-  x+=1;
-  printf("Increemented",x)
+void add(int *x){
+  *x+=1;
+  printf("Increemented",*x)
 }
 int main(){
     int x;
     printf("Enter numbers:");
     scanf("%d",&x);
     printf("Before increement:%d",x);
-    add(x);
+    add(&x);
     printf("After increement:%d",x);
+}
+//program to perform a math library function with the help of function
+#include <stdio.h>
+void pow(int x, int y){
+    int prd=1;
+    for (int i=0;i<y;i++){
+        prd*=x;
+    }
+    printf("%d",prd);
+}
+int main(){
+    int x,y;
+    printf("Enter a number: ");
+    scanf("%d",&x);
+    printf("Enter a number: ");
+    scanf("%d",&y);
+    pow(x,y);
 }
