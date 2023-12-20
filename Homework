@@ -53,7 +53,56 @@ int main(){
     int x,y;
     printf("Enter a number: ");
     scanf("%d",&x);
-    printf("Enter a number: ");
-    scanf("%d",&y);
-    pow(x,y);
+
+//DONE ON 20/12/23
+//Program to get fibonacci series without function
+#include <stdio.h>
+int main(){
+    int x;
+    printf("Enter the number of digits in series");
+    scanf("%d",&x);
+    int a=0,b=1;
+    int c=a+b;
+    printf("%d ",a);
+    printf("%d ",b);
+    for(int i=0;i<x-2;i++){
+        printf("%d ",c);
+        a=b;
+        b=c;
+        c=a+b;
+    }
+}
+//Program to get fibonacii series with function
+#include <stdio.h>
+int display(int n){
+    if(n<=1){
+        return n;
+    }
+    else{
+        return display(n-1)+display(n-2);
+    }
+}
+int main(){
+    int x;
+    printf("Enter the number of digits in series: ");
+    scanf("%d",&x);
+    for(int i=0;i<x;i++){
+        printf("%d ",display(i));
+    }
+}
+//Program to get factorial using function
+#include <stdio.h>
+int fact(int n){
+    if(n<=2){
+        return n;
+    }
+    else{
+        return n*fact(n-1);
+    }
+}
+int main(){
+    int x;
+    printf("Enter the number for which you want to find factorial");
+    scanf("%d",&x);
+    printf("%d",fact(x));
 }
